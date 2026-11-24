@@ -1,0 +1,4 @@
+# TODO: Validate
+node_modules/
+dist/
+*.tsbuildinfo

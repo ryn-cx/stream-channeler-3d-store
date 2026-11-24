@@ -1,0 +1,48 @@
+{
+  "name": "stream-channeler-3d-store",
+  "version": "0.0.0",
+  "description": "The walkable 3D video store from Stream Channeler.",
+  "license": "AGPL-3.0-only",
+  "repository": "github:ryn-cx/stream-channeler-3d-store",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./caseTexture": "./src/caseTexture.ts",
+    "./counter": "./src/counter.ts",
+    "./fakeData": "./src/fakeData/index.ts",
+    "./storeBackend": "./src/storeBackend.ts",
+    "./storeStock": "./src/storeStock.ts",
+    "./storeTypes": "./src/storeTypes.ts",
+    "./TrailerPlayer": "./src/TrailerPlayer.tsx"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check --write --unsafe --no-errors-on-unmatched --files-ignore-unknown=true ./",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-react": "^1.21.0",
+    "three": "^0.186.0"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.101.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.1",
+    "@tailwindcss/vite": "^4.3.1",
+    "@tanstack/react-query": "^5.101.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react-swc": "^4.3.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.1.0"
+  }
+}

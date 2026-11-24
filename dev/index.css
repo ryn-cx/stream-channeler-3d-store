@@ -1,0 +1,16 @@
+/* TODO: Validate */
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  body {
+    background: black;
+    color: white;
+  }
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+}

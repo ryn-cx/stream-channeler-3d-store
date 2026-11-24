@@ -1,7 +1,7 @@
 <!-- TODO: Validate -->
 # Stream Channeler 3D Store
 
-The walkable 3D video store from [Stream Channeler](https://github.com/ryn-cx/stream-channeler). Titles sit on shelves as cases that you can pick up, spin around, and take to the counter.
+The walkable 3D video store from [Stream Channeler](https://streamchanneler.com/). Titles sit on shelves as cases that you can pick up, spin around, and take to the counter.
 
 ![Shelves of cases inside the 3D video store](images/video-store.webp)
 

@@ -937,6 +937,7 @@ export function StoreFilterPanel({
   const [draft, setDraft] = useState(filters)
   const metadataChoices: StoreMetadata[] = ["source", "tmdb"]
   const [tab, setTab] = useState<"filters" | "design" | "audio">("filters")
+  const [audioTabWasOpened, setAudioTabWasOpened] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
   const draftRef = useRef(draft)
   const bounds = storeBounds(titles)
@@ -1114,7 +1115,10 @@ export function StoreFilterPanel({
             <button
               key={entry}
               type="button"
-              onClick={() => setTab(entry)}
+              onClick={() => {
+                setTab(entry)
+                if (entry === "audio") setAudioTabWasOpened(true)
+              }}
               className={`flex-1 rounded-md px-3 py-1.5 text-xs font-medium capitalize ${
                 tab === entry ? "bg-white/15 text-white" : "text-white/60"
               }`}
@@ -1393,14 +1397,16 @@ export function StoreFilterPanel({
           <span className="text-xs font-medium uppercase tracking-wide text-white/50">
             Store soundtrack
           </span>
-          <iframe
-            title="Store soundtrack"
-            src="https://www.youtube.com/embed/qX_XTr0rN2E"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            className="aspect-video w-full rounded-lg border border-white/15"
-          />
+          {audioTabWasOpened && (
+            <iframe
+              title="Store soundtrack"
+              src="https://www.youtube.com/embed/qX_XTr0rN2E"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="aspect-video w-full rounded-lg border border-white/15"
+            />
+          )}
           <p className="text-[11px] text-white/40">
             Keeps playing while you browse the shelves.
           </p>
